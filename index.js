@@ -219,4 +219,4 @@ const QuickWorker = async ({properties={},imports=[],freeze,timeout=1000,name="a
     })
 }
 
-export {QuickWorker}
+export {QuickWorker as default}

@@ -1,0 +1,22 @@
+{
+  "name": "@anywhichway/quick-worker",
+  "version": "0.0.2",
+  "description": "A library to quickly create WebWorkers and treat them almost like regular objects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anywhichway/quick-worker.git"
+  },
+  "keywords": [
+    "WebWorker"
+  ],
+  "author": "Simon Y. Blackwell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anywhichway/quick-worker/issues"
+  },
+  "homepage": "https://github.com/anywhichway/quick-worker#readme"
+}

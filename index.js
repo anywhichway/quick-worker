@@ -1,4 +1,24 @@
-const body = `const properties = {};
+const body = `
+    const _fetch = fetch;
+    fetch = (urlOrRequest,options) => {
+        if(document.baseURI) {
+            if(urlOrRequest && typeof(urlOrRequest)==="object") {
+                options = Object.assign({},urlOrRequest);
+                urlOrRequest = options.url;
+                delete options.url;
+            } else {
+                urlOrRequest = new URL(urlOrRequest,document.baseURI);
+            }
+        }
+        try {
+            return _fetch(urlOrRequest,options);
+        } catch(e) {
+            console.error(e);
+            if(!document.baseURI) console.error("Pass baseURI as part of document for QuickWorker");
+            throw e;
+        }
+    };
+    const properties = {};
     let document;
     self.addEventListener('message',async (event) => {
     const directive = JSON.parse(event.data);

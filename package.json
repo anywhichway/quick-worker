@@ -1,7 +1,8 @@
 {
   "name": "@anywhichway/quick-worker",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A library to quickly create WebWorkers and treat them almost like regular objects.",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
